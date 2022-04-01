@@ -4,7 +4,7 @@
     <title>Classroom form</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css" rel="stylesheet">
 </head>
-<body style="background-color:#E8E4C9;">
+<body style="background-color:#D3D3D3">
 
 <div class="container">
     @yield('content')
