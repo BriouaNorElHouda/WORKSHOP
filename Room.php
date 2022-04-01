@@ -10,7 +10,7 @@ class Room extends Model
     use HasFactory;
 
     protected $fillable = [
-        'id', 'type','floor', 'capacity','particular'
+        'idRoom', 'type','floor', 'capacity','particular'
 
     ];
 }
