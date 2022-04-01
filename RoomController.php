@@ -38,7 +38,7 @@ class RoomController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'id' => 'required|unique:rooms|regex:/[a-zA-Z0-9\s]+/',
+            'idRoom' => 'required|unique:rooms|regex:/[a-zA-Z0-9\s]+/',
             'type' => 'required',
             'floor' => 'required|numeric',
             'capacity' => 'required',
@@ -84,7 +84,7 @@ class RoomController extends Controller
     public function update(Request $request, Room $room)
     {
         $request->validate([
-            'id' => 'required|unique:rooms|regex:/[a-zA-Z0-9\s]+/',
+            'idRoom' => 'required|regex:/[a-zA-Z0-9\s]+/',
             'type' => 'required',
             'floor' => 'required|numeric',
             'capacity' => 'required',
