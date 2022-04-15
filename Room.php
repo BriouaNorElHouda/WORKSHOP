@@ -13,4 +13,8 @@ class Room extends Model
         'idRoom', 'type','floor', 'capacity','particular'
 
     ];
+    protected $primaryKey = 'idRoom';
+
+
+    public $incrementing = false;
 }
