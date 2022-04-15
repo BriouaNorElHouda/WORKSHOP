@@ -23,7 +23,7 @@
         </div>
     @endif
 
-    <form action="{{ route('rooms.update',$room->id) }}" method="POST">
+    <form action="{{ route('rooms.update',$room->idRoom) }}" method="POST">
         @csrf
         @method('PUT')
 
@@ -31,13 +31,13 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>IdRoom</strong>
-                    <input type="text" name="idRoom" value="{{ $room->idRoom }}" class="form-control" placeholder="Enter the name">
+                    <input  required= required type="text" name="idRoom" value="{{ $room->idRoom }}" class="form-control" placeholder="Enter the name">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Type</strong>
-                    <input type="text" name="type" value="{{ $room->type }}" class="form-control"
+                    <input required= required type="text" name="type" value="{{ $room->type }}" class="form-control"
                            placeholder="Enter the type">
                 </div>
             </div>
@@ -45,7 +45,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Floor</strong>
-                    <input type="text" name="floor" value="{{ $room->floor }}" class="form-control"
+                    <input  required= required type="text" name="floor" value="{{ $room->floor }}" class="form-control"
                            placeholder="Enter the floor">
                 </div>
             </div>
@@ -53,14 +53,14 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Capacity</strong>
-                    <input type="number" name="capacity" value="{{ $room->capacity }}" class="form-control"
+                    <input  required= required type="number" name="capacity" value="{{ $room->capacity }}" class="form-control"
                            placeholder="Enter the capacity">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Particular</strong>
-                    <input type="text" name="particular" value="{{ $room->particular }}" class="form-control"
+                    <input required= required type="text" name="particular" value="{{ $room->particular }}" class="form-control"
                            placeholder="Is it particular?">
                 </div>
             </div>
