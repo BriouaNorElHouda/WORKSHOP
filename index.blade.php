@@ -20,7 +20,7 @@
 
     <table class="table table-bordered">
         <tr>
-            <th>No</th>
+
             <th>IdRoom</th>
             <th>Type</th>
             <th>Floor</th>
@@ -31,7 +31,7 @@
         </tr>
         @foreach ($data as $key => $value)
             <tr>
-                <td>{{ ++$i }}</td>
+
                 <td>{{ $value->idRoom }}</td>
                 <td>{{ $value->type }}</td>
                 <td>{{ $value->floor}}</td>
@@ -40,9 +40,9 @@
                 <td>{{ $value->particular }}</td>
 
                 <td>
-                    <form action="{{ route('rooms.destroy',$value->id) }}" method="POST">
-                        <a class="btn btn-info" href="{{ route('rooms.show',$value->id) }}">Show</a>
-                        <a class="btn btn-primary" href="{{ route('rooms.edit',$value->id) }}">Edit</a>
+                    <form action="{{ route('rooms.destroy',$value->idRoom) }}" method="POST">
+                        <a class="btn btn-info" href="{{ route('rooms.show',$value->idRoom) }}">Show</a>
+                        <a class="btn btn-primary" href="{{ route('rooms.edit',$value->idRoom) }}">Edit</a>
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger" onclick="return confirm('Sure Want Delete?')">Delete</button>
